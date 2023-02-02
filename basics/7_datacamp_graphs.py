@@ -16,5 +16,6 @@ st.pyplot(fig)
 # Libe Graph
 st.subheader('Line graph')
 
-df = pd.DataFrame(np.random(10,2), columns=["x","y"])
+data = np.random.rand(10,2)
+df = pd.DataFrame(data,columns=['x','y'])
 st.line_chart(df)
