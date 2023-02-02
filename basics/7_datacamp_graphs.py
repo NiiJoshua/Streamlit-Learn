@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import altair as alt
+import graphviz as gv
 
 
 st.title('Collection of graphs')
@@ -39,3 +40,15 @@ sp = pd.DataFrame(np.random.randn(500,3), columns=['x','y','z'])
 c = alt.Chart(sp).mark_circle().encode(
     x='x', y='y', size='z', color='z', tooltip=['x','y','z'])
 st.altair_chart(c, use_container_width=True)
+
+# Flow Chart
+st.subheader('Flow Chart')
+
+st.graphviz_chart('''
+    digraph {
+        Big_shark -> Tuna
+        Tuna -> Mackerel
+        Mackerel -> Small_fishes
+        Small_fishes -> Shrimp
+    }
+''')
