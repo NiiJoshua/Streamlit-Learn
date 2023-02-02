@@ -11,3 +11,10 @@ def get_fvalue(val):
     for key, value in feature_dict.items():
         if val == key:
             return value
+
+def get_value(val, my_dict):
+    for key,value in my_dict.items():
+        if val==key:
+            return value
+
+app_mode = st.sidebar.selectbox('Select Page',['Home','Prediction']) #two pages
