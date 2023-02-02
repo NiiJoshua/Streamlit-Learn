@@ -18,3 +18,7 @@ def get_value(val, my_dict):
             return value
 
 app_mode = st.sidebar.selectbox('Select Page',['Home','Prediction']) #two pages
+
+if app_mode == 'Home':
+    st.title('Loan Prediction :')
+    st.image
