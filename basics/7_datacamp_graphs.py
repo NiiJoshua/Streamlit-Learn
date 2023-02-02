@@ -19,3 +19,9 @@ st.subheader('Line graph')
 data = np.random.rand(10,2)
 df = pd.DataFrame(data,columns=['x','y'])
 st.line_chart(df)
+
+
+# Bar Chart
+st.subheader('Bar graph')
+df = pd.DataFrame(np.random.rand(10,2), columns=['x','y'])
+st.bar_chart(df)
