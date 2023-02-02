@@ -5,3 +5,8 @@ import numpy as np
 
 st.title('Collection of graphs')
 st.subheader('Bar graph')
+
+rand = np.random.normal(1,2, size=20)
+fig, ax = plt.subplots()
+ax.hist(rand, bins=15)
+st.pyplot(fig)
