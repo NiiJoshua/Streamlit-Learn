@@ -34,6 +34,7 @@ elif app_mode == 'Prediction':
     feature_dict = {"No":1, "Yes":2}
     edu = {"Graduate":1, "Not Graduate":2}
     prop = {'Rural':1, 'Urban':2, 'Semiurban':3}
+    
     ApplicantIncome = st.sidebar.slider('Applicant Income',0,10000,0)
     CoapplicantIncome = st.sidebar.slider('Coapplicant Income',0,10000,0)
     LoanAmount = st.sidebar.slider('Loan Amount in K$',9.0,700.0,200.0)
@@ -64,3 +65,17 @@ elif app_mode == 'Prediction':
         Semiurban = 1
     else: 
         Rural = 1 
+
+    
+    catCols = {
+        'Gender':Gender,
+        'Maried':Married,
+        'Dependents':Dependents,
+        'Education': Education,
+        'ApplicantIncome':ApplicantIncome,
+        'CoapplicantIncome':CoapplicantIncome,
+        'SelfEmployed': Self_Employed,
+        'LoanAmount':LoanAmount,
+        'Loan_Amount_Term':Loan_Amount_Term,
+        
+    }
