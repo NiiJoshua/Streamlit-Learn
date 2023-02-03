@@ -100,4 +100,4 @@ elif app_mode == 'Prediction':
         catCols['Property_Area'][2],
     ]
 
-    single_sample
+    single_sample = np.array(feature_list).reshape(1,-1)
