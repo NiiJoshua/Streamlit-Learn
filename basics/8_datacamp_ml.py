@@ -77,5 +77,27 @@ elif app_mode == 'Prediction':
         'SelfEmployed': Self_Employed,
         'LoanAmount':LoanAmount,
         'Loan_Amount_Term':Loan_Amount_Term,
-        
+        'Credit_History':Credit_History,
+        'Property_Area':[Rural,Urban,Semiurban],
+
     }
+    feature_list = [
+        ApplicantIncome,
+        CoapplicantIncome,
+        LoanAmount,
+        Loan_Amount_Term,
+        Credit_History,
+        get_value(Gender, gender_dict),
+        get_fvalue(Married),
+        catCols['Dependents'][0],
+        catCols['Dependents'][1],
+        catCols['Dependents'][2],
+        catCols['Dependents'][3],
+        get_value(Education,edu),
+        get_fvalue(Self_Employed),
+        catCols['Property_Area'][0],
+        catCols['Property_Area'][1],
+        catCols['Property_Area'][2],
+    ]
+
+    single_sample
