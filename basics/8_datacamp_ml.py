@@ -101,3 +101,5 @@ elif app_mode == 'Prediction':
     ]
 
     single_sample = np.array(feature_list).reshape(1,-1)
+
+    if st.button("Predict"): 
