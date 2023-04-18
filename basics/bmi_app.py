@@ -3,6 +3,7 @@ import streamlit as st
 st.title('Welcome to BMI calculator')
 weight = st.number_input("Enter your weight in kg")
 status = st.radio('Select your height in any format: ',('cm','meters','feet'))
+bmi = None
 
 if (status == 'cm'):
     height  = st.number_input('Centimeters')
@@ -15,7 +16,7 @@ if (status == 'cm'):
 elif (status == 'meters'):
     height = st.number_input('Meters')
     try:
-        bim = weight/ (height **2)
+        bmi = weight/ (height **2)
     except:
         st.text("Please enter a value for height")
 
@@ -24,6 +25,8 @@ else:
 
     try:
         bmi = weight / (((height/3.28))**2)
+    except:
+        st.text("Enter some value for height")
 
 if (st.button('Calculate BMI')):
     st.text(f"Your BMI index is {bmi}")
